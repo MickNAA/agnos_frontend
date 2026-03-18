@@ -11,7 +11,6 @@ export type NextApiResponseWithSocket = NextApiResponse & {
   };
 };
 
-// In-memory session store (replace with Redis for multi-instance deployments)
 const sessions = new Map<string, any>();
 
 export default function handler(req: NextApiRequest, res: NextApiResponseWithSocket) {
